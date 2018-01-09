@@ -1,0 +1,3 @@
+[submodule "FRCDashboard"]
+	path = FRCDashboard
+	url = https://github.com/FRCDashboard/FRCDashboard
