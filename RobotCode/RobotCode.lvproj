@@ -113,8 +113,12 @@ AddOutputFilter chunkFilter
 		<Property Name="target.webservices.ValidTimestampWindow" Type="Int">15</Property>
 		<Item Name="Support Code" Type="Folder">
 			<Item Name="Elapsed Times.vi" Type="VI" URL="../Elapsed Times.vi"/>
+			<Item Name="Button Press.vi" Type="VI" URL="../Button Press.vi"/>
+			<Item Name="Parking States.ctl" Type="VI" URL="../Parking States.ctl"/>
+			<Item Name="Lift States.ctl" Type="VI" URL="../Lift States.ctl"/>
 		</Item>
 		<Item Name="Team Code" Type="Folder">
+			<Item Name="Unpack Auto Step.vi" Type="VI" URL="../Unpack Auto Step.vi"/>
 			<Item Name="Autonomous Independent.vi" Type="VI" URL="../Autonomous Independent.vi"/>
 			<Item Name="Begin.vi" Type="VI" URL="../Begin.vi"/>
 			<Item Name="Disabled.vi" Type="VI" URL="../Disabled.vi"/>
@@ -124,9 +128,7 @@ AddOutputFilter chunkFilter
 			<Item Name="Teleop.vi" Type="VI" URL="../Teleop.vi"/>
 			<Item Name="Test.vi" Type="VI" URL="../Test.vi"/>
 			<Item Name="Vision Processing.vi" Type="VI" URL="../Vision Processing.vi"/>
-			<Item Name="Unpack Auto Step.vi" Type="VI" URL="../Unpack Auto Step.vi"/>
 			<Item Name="ValorAuto.vi" Type="VI" URL="../ValorAuto.vi"/>
-			<Item Name="Lift States.ctl" Type="VI" URL="../Lift States.ctl"/>
 			<Item Name="Lift State Machine.vi" Type="VI" URL="../Lift State Machine.vi"/>
 			<Item Name="Compile Auto Path.vi" Type="VI" URL="../Compile Auto Path.vi"/>
 			<Item Name="ReverseTurn.vi" Type="VI" URL="../ReverseTurn.vi"/>
