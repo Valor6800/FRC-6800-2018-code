@@ -135,6 +135,10 @@ AddOutputFilter chunkFilter
 			<Item Name="Load File Data.vi" Type="VI" URL="../Load File Data.vi"/>
 		</Item>
 		<Item Name="Robot Main.vi" Type="VI" URL="../Robot Main.vi"/>
+		<Item Name="Cube States.ctl" Type="VI" URL="../Cube States.ctl"/>
+		<Item Name="Intake.vi" Type="VI" URL="../Intake.vi"/>
+		<Item Name="Base.vi" Type="VI" URL="../Base.vi"/>
+		<Item Name="PD Control.vi" Type="VI" URL="../PD Control.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="8.6CompatibleGlobalVar.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/config.llb/8.6CompatibleGlobalVar.vi"/>
