@@ -1,0 +1,259 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+body {
+    font: 16px sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: white;
+    overflow: hidden;
+    background: #222;
+}
+button, input[type="text"], input[type="number"], .select-container, select {
+    color: white;
+    background: #444;
+    border: none;
+    font-size: 14px;
+    padding: 6px 8px;
+    cursor: pointer;
+    outline: 0;
+}
+.select-container, option {
+    padding: 0;
+    display: inline-block;
+    color: black
+}
+select {
+    border: none;
+    background: none;
+    color: white;
+}
+input[type="text"], input[type="number"] {
+    cursor: text;
+}
+input[type="checkbox"] {
+    -webkit-filter: saturate(0);
+    filter: saturate(0);
+}
+/* Major interface panes, aside, article, header, etc. */
+body > * {
+    padding: 10px;
+    position: fixed;
+    overflow: scroll;
+    background: #222;
+}
+#timer {
+    font-family: monospace;
+    display: block;
+    height: 20vh;
+    width: 30vw;
+    top: 0;
+    left: 0;
+    font-size: 20vh;
+    line-height: .8;
+    background: transparent;
+}
+header {
+    width: 50vw;
+    height: 20vh;
+    top: 0;
+    left: 30vw;
+    color: white;
+}
+footer {
+    right: 0;
+    bottom: 0;
+    height:10vh;
+    left: 60vw;
+    padding: 1rem;
+    background: gray;
+}
+#camera{
+    padding: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: #333;
+    text-align: center; 
+    font-family: sans-serif; 
+    font-weight: bold; 
+    font-size: 10vw; 
+    color: rgba(255, 255, 255, 0.3); 
+    line-height: 100vh;
+    background-color: black;
+    /* You'll need to mess with this a bit to get your camera to work. Replace the url with a live-updating image feed from your camera. Using other camera streaming systems will require some tweaking. */
+    /*background-image: url('http://roborio-6800-frc.local:1181/stream.mjpg?name=Camera');*/
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fullscreen {
+    width: 100vw;
+    height: 100vh;
+}
+
+.camera-normal {
+    width: 60vw;
+    height: 80vh;
+}
+
+
+svg * {
+    stroke: white;
+    fill: #222;
+    stroke-width: 2;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+}
+text {
+    font-size: 16px;
+    letter-spacing: 2px;
+    stroke: none;
+    fill: white;
+}
+
+aside {
+    right: 0;
+    top: 0;
+    width: 40vw;
+    height: 90vh;
+}
+aside > * {
+    margin-bottom: 5px;
+}
+#login {
+    position: fixed;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8)
+}
+body.login #login {
+    display: flex;
+}
+#login :disabled {
+    opacity: 0.6;
+}
+#login > * {
+    height: 40px;
+}
+#login > button {
+    margin-left: 5px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    background: gray;
+    cursor: pointer;
+    border: 1px solid white;
+    margin-top: 0px;
+  }
+  
+  input[type=range] {
+    -webkit-appearance: none;
+    outline: 0;
+    margin-bottom: 10px;
+    padding: 0px;
+    height:2px;
+    width: 100%;
+  }
+
+  #wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  #allianceColor {
+      width: 100px;
+      align-self: center;
+  }
+
+  .red {
+      background: brown;
+  }
+
+  .gray {
+    background: gray;
+  }
+
+  .green {
+      background: green;
+  }
+
+  .blue {
+      background: cornflowerblue;
+  }
+
+  .yellow {
+    background: darkorange;
+  }
+
+  #tuning {
+    width: 20vw;
+    height: 80vh;
+    bottom: 0;
+    left: 0;
+}
+#tuning div {
+    margin: 20px 0;
+}
+#tuning p {
+    margin-bottom: 10px;
+}
+input[type="text"],
+input[type="number"] {
+    padding: .5em;
+}
+
+span {
+    position: absolute;
+    display: block;
+    height: 50px;
+    width: 1px;
+    background: red;
+    opacity: 0.5;
+}
+
+.vert {
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+
+.horz {
+    left:50%;
+    top:50%;
+    width: 50px;
+    height: 1px;
+    transform: translate(-50%,-50%);
+}
+
+.dot {
+    left:50%;
+    top:50%;
+    height: 25px;
+    width: 25px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid red;
+    display: inline-block;
+    transform: translate(-50%,-50%);
+  }

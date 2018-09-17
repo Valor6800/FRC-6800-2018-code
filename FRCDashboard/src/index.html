@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>FRC Dashboard</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    
+    <header>
+        <table style="width: 100%; height: 100%;">
+            <tr>
+                <td id="wrapper">
+                    <img src='../images/valor-square.png' height="80px" id="picture">
+                    <h1>Viperbots Valor 6800</h1>
+                </td>
+            </tr>
+        </table> 
+    </header>
+    <!-- You'll need to mess around with the CSS of #camera (found in css/style.css) to get it to work.
+        More explanation in that CSS rule. -->        
+        <div id="camera" class="camera-normal">
+            <span class="vert"></span>
+            <span class="horz"></span>
+            <span class="dot"></span>
+        </div>
+
+        <div id="timer">2:15</div>
+    
+    <!-- <div id="camera" class="back">Back</div> -->
+
+    <!-- The sidebar of the dashboard. Designed for smaller control elements like selection boxes and small buttons. -->
+    <aside id='content'>
+        <!-- Autonomous selector -->
+        <button id="connect-button">Connect</button>
+        <div class="select-container">
+            <select id="auto-select">
+                <option>No auto modes found</option>
+                <option>Sucks for you</option>
+                <!-- This gets populated by JS -->
+            </select>
+        </div>
+        
+        <br>
+        <div style="width:100%">
+            <table style="border-spacing:0px 10px; width:100%;">
+                <thead>
+                    <tr>
+                        <th colspan="3" style="width:100%;">Starting Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><button id="left_start" data-pos="-1" class="gray" style="width:100%;">Left</button></td>
+                        <td><button id="center_start" data-pos="0" class="gray" style="width:100%;">Center</button></td>
+                        <td><button id="right_start" data-pos="1" class="gray" style="width:100%;">Right</button></td>
+                    </tr>
+                </tbody>
+            </table>
+                   
+        </div>
+        <br>
+
+        <div style="width:100%;">
+            <table style="border-spacing:0px 10px; display:inline;">
+                <thead>
+                    <tr>
+                        <th colspan="2" style ="min-width: 250px">Lift</th>
+                        <th colspan="2" style ="min-width: 250px">navX</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Lift Assist
+                        </td>
+                        <td><button id="liftAssist" class="green" style="width: 130px;">ENABLED</button></td>
+                        <td>Status</td>
+                        <td><button id="navx_connected" class="red" style="width: 130px;">DISCONNECTED</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Lift Position
+                        </td>
+                        <td>
+                            <div id="liftPosition" style="display:inline;">0.00% </div> 
+                        </td>
+                        <td> Heading</td>
+                        <td>
+                            <div id="navx_heading">0.00°</div>
+                        </td>
+                    </tr>
+                    <tr><td style="height:40px;"></td></tr>
+                    <tr>
+                        <th colspan="2">Chassis</th>
+                        <th colspan="2">Intake</th>
+                    </tr>
+                    <tr>
+                        
+                        <td>Speed</td>
+                        <td><div  id="robot_speed" style="display:inline;">0.0</div > FPS</td>
+                        <td>Block Status</td>
+                        <td><button id="has_cube" class="gray" style="width: 130px;">No</button></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        
+        <br><br>
+
+        <!-- The actual tuning window -->
+        <div id="tuning" style="display: none;">
+            <input type="text" placeholder="Property" id="name">
+            <input type="text" placeholder="Value" id="value" style="margin-bottom:5px">
+            <br>
+            <button id="set">Set</button>
+            <button id="get">Get</button>
+        </div>
+    </aside>
+    <footer id="connection-status" style="display: flex; align-items: center; justify-content:center; max-height:52px;">
+            <!-- Tells whether robot is connected to dashboard. -->
+    </footer>
+    <div id="login">
+        <input id="connect-address" type="text" value="localhost" disabled>
+        <button id="connect" disabled>Connecting</button>
+    </div>
+    <script src="networktables/networktables.js"></script>
+    <script src="connection.js"></script>
+    <script src="ui.js"></script>
+</body>
+
+</html>
